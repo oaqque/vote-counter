@@ -1,0 +1,37 @@
+Init: 
+    LDSECRET
+
+Receive:
+    NOOP
+    LD_VOTECOUNT 
+    LD_RECTAG
+    GENTAG -> Generate Tag and write to $TAG
+    JMP Receive
+
+    BCOMPARETAG TotalVote -> COMPARE $TAG AND $RECTAG Warning: Data Hazard with $TAG
+    JMP Receive -> Loop back up
+    
+TotalVote:
+    SW_VOTE -> Writes $VOTECOUNT to memory according to District ID and Candidate ID in $VOTECOUNT
+    LD_TOTAL -> Loads Current Total from memory into $TOTAL according to Candidate ID in $VOTECOUNT
+    ADDTOTAL -> Add $VOTECOUNT and $TOTAL to make $NEWTOTAL
+    STOTAL -> Saves $NEWTOTAL to memory according to Candidate ID in $VOTECOUNT
+    JMP Receive
+
+
+Init: 
+    LDSECRET
+
+Receive:
+    NOOP
+    GENTAG
+
+GPR SIZE 32 BIT
+$0
+$1 <- $VOTECOUNT
+$2 <- $TAG
+$3 <- $SECRETKEY
+
+DATA MEMORY 32 BIT
+
+
