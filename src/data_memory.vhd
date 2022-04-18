@@ -38,7 +38,7 @@ begin
         
         if (reset = '1') then
             -- initial values of the data memory : reset to zero 
-            data_write : FOR i IN 0 TO 1023 loop
+            data_write : FOR i IN 1 TO 1023 loop
                 var_data_mem(i) := X"0000";
             END loop;
             -- var_data_mem(0)  := X"0005";
