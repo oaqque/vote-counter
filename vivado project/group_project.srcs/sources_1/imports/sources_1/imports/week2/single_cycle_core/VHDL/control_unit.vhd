@@ -42,56 +42,20 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity control_unit is
-    port ( opcode     : in  std_logic_vector(3 downto 0);
-           reg_dst    : out std_logic;
-           reg_write  : out std_logic;
-           alu_src    : out std_logic;
-           mem_write  : out std_logic;
-           mem_to_reg : out std_logic;
-           alu_op     : out std_logic_vector(1 downto 0);
-           load_byte  : out std_logic );
+port ( reset       : in std_logic;
+            pc_state    : in  std_logic;
+           tag_gen      : out std_logic;
+           sec_load     : out std_logic;
+           busy         : out std_logic);
 end control_unit;
 
 architecture behavioural of control_unit is
 
-constant OP_LOAD                : std_logic_vector(3 downto 0) := "0001";
-constant OP_STORE               : std_logic_vector(3 downto 0) := "0011";
-constant OP_ADD                 : std_logic_vector(3 downto 0) := "1000";
-constant OP_LOAD_BYTE           : std_logic_vector(3 downto 0) := "0010";
-constant OP_SET_ON_LESS_THAN    : std_logic_vector(3 downto 0) := "0100";
-constant OP_ROTATE_SHIFT_RIGHT  : std_logic_vector(3 downto 0) := "0101";
+
 
 begin
 
-    reg_dst    <= '1' when (opcode = OP_ADD
-                            or opcode = OP_SET_ON_LESS_THAN 
-                            or opcode = OP_ROTATE_SHIFT_RIGHT) else
-                  '0';
-
-    reg_write  <= '1' when (opcode = OP_ADD
-                            or opcode = OP_LOAD 
-                            or opcode = OP_LOAD_BYTE
-                            or opcode = OP_SET_ON_LESS_THAN
-                            or opcode = OP_ROTATE_SHIFT_RIGHT) else
-                  '0';
-    
-    alu_src    <= '1' when (opcode = OP_LOAD 
-                            or opcode = OP_STORE 
-                            or opcode = OP_LOAD_BYTE) else
-                  '0';
-                 
-    mem_write  <= '1' when opcode = OP_STORE else
-                  '0';
-                 
-    mem_to_reg <= '1' when (opcode = OP_LOAD
-                            or opcode = OP_LOAD_BYTE) else
-                  '0';
-
-    load_byte <= '1' when opcode = OP_LOAD_BYTE else
-                  '0';
-    
-    with opcode select
-        alu_op <= "01" when OP_SET_ON_LESS_THAN,    -- subtraction
-                    "10" when OP_ROTATE_SHIFT_RIGHT,    -- rotate right
-                     "00" when others;              -- addition, default
+    tag_gen  <= pc_state;
+    busy <= pc_state;
+    sec_load <= reset;
 end behavioural;

@@ -119,13 +119,6 @@ component xor_tag is
            our_tag : out std_logic_vector(7 downto 0));
 end component;
 
-component splitter is
-    port (vote_record   : in std_logic_vector(31 downto 0);
-          D3            : out std_logic_vector(7 downto 0);
-          D2            : out std_logic_vector(7 downto 0);
-          D1            : out std_logic_vector(7 downto 0);
-          D0            : out std_logic_vector(7 downto 0));
-end component;
 
 component comparator is
     port ( our_tag : in std_logic_vector(7 downto 0);
