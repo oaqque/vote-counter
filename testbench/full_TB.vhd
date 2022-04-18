@@ -10,10 +10,10 @@ use ieee.std_logic_arith.all;
 use ieee.numeric_std.all;
 use std.textio.all;
 
-entity swap_TB is
-end swap_TB;
+entity full_TB is
+end full_TB;
 
-architecture Behavioral of swap_TB is
+architecture Behavioral of full_TB is
 
     component pipeline_vote_counter_core is
       port (clk         : in std_logic;
