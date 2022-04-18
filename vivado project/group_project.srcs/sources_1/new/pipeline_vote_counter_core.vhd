@@ -36,7 +36,7 @@ entity pipeline_vote_counter_core is
             reset       : in std_logic;
             send        : in std_logic;
             rec_in         : in std_logic_vector(31 downto 0);
-            rec_tag_in     : in std_logic_vector(31 downto 0);
+            rec_tag_in     : in std_logic_vector(7 downto 0);
             busy        : out std_logic);
            
 end pipeline_vote_counter_core;
