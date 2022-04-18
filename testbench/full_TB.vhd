@@ -62,6 +62,12 @@ begin
     variable TEST_LINE : line;
     variable INPUT_DATA : std_logic_vector(63 downto 0);
   begin
+    -- Reset the vote counter
+    reset <= '1';
+    wait for clk_period;
+    reset <= '0';
+    wait for clk_period;
+
     file_open(TEST_DATA, "test_input.txt", read_mode); 
     while not endfile(TEST_DATA) loop
       if busy == '1' then
