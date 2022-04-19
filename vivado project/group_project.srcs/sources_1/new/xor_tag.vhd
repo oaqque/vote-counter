@@ -38,5 +38,5 @@ end xor_tag;
 
 architecture behavioural of xor_tag is
 begin
-    our_tag <= B0 xor B1 xor B2 xor B3; 
+    our_tag <= (B0 xor B1 xor B2 xor B3); 
 end behavioural;

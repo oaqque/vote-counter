@@ -132,7 +132,7 @@ signal sig_pc_state : std_logic;
 
     -- control signals
     signal sig_tag_gen_sm : std_logic;
-    signal sig_busy : std_logic;
+ 
     signal sig_sec_load : std_logic;
     
 signal sig_sec_sm : std_logic_vector(24 downto 0);
@@ -210,7 +210,7 @@ begin
                     pc_state => sig_pc_state,
                     tag_gen => sig_tag_gen_sm,
                     sec_load => sig_sec_load,
-                    busy => sig_busy);
+                    busy => busy);
     
     reg_sec : regnld
         generic map (n => 25)
@@ -313,10 +313,10 @@ begin
     sig_tag_xor <= sig_rol_xor_out(7 downto 0);
     
     tag_gen : xor_tag
-        port map ( B0 => sig_rec_xor(7 downto 0),
-                    B1 => sig_rec_xor(15 downto 8),
-                    B2 => sig_rol_xor_out(23 downto 16),
-                    B3 => sig_rol_xor_out(31 downto 24),
+        port map ( B0 => sig_rol_xor_out(47 downto 40),
+                    B1 => sig_rol_xor_out(55 downto 48),
+                    B2 => sig_rol_xor_out(63 downto 56),
+                    B3 => sig_rol_xor_out(71 downto 64),
                     our_tag => sig_tag_out);
     
     cmp : comparator

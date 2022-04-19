@@ -61,10 +61,12 @@ begin
         variable v_SPACE : character;
     begin
         -- Reset the vote counter
-        reset <= '1';
-        wait for clk_period;
-        reset <= '0';
-        wait for clk_period;
+ 
+            reset <= '1';
+            wait for clk_period;
+            reset <= '0';
+            wait for clk_period;
+      
 
         file_open(input_file, "test_input.txt", read_mode); 
         while not endfile(input_file) loop
