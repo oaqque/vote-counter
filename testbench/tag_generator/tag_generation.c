@@ -46,17 +46,15 @@ unsigned char xor(unsigned char input[])
 
 unsigned char ror_byte(unsigned char x, int n)
 {
-    unsigned char temp = x >> (8 - n);
-    x = (x << n) & 0xFF;
+    unsigned char temp = x << (8 - n);
+    x = (x >> n) & 0xFF;
     return x | temp;
 }
 
 unsigned char rol_byte(unsigned char x, int n)
 {
-    printf("Rotating left %d by %d\n", x, n);
     unsigned char temp = (x << n) & 0xFF;
     x = x >> (8 - n);
-    printf("%d \n", (temp | x));
     return temp | x;
 }
 
