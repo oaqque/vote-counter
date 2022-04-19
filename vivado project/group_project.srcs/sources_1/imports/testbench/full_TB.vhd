@@ -25,10 +25,10 @@ architecture Behavioral of full_TB is
     --Inputs
     signal send : std_logic;
     signal rec_in : std_logic_vector(31 downto 0);
-    signal rec_tag_in : std_logic_vector(31 downto 0);
+    signal rec_tag_in : std_logic_vector(7 downto 0);
 
     --Outputs
-    signal busy : std_logic;
+    signal busy : std_logic := '0';
     signal reset : std_logic;
     signal clk : std_logic;
     constant clk_period : time := 10 ns;

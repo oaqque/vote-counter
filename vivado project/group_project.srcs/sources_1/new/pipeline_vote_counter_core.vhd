@@ -216,7 +216,7 @@ begin
         generic map (n => 25)
         port map ( D => sig_sec_out(24 downto 0),
                     clk => clk,
-                    reset => reset,
+                    reset => '0',
                     L => sig_sec_load,
                     Q => sig_sec_sm);
                     
@@ -225,14 +225,14 @@ begin
         generic map (n => 32)
         port map ( D => rec_in,
                     clk => clk,
-                    reset => reset,
+                    reset => '0',
                     Q => sig_rec_sm);
                     
     reg_tag : regn
         generic map (n => 8)
         port map ( D => rec_tag_in,
                    clk => clk,
-                   reset => reset,
+                   reset => '0',
                    Q => sig_tag_sm);
     
     sig_sm_swap_in <= sig_tag_gen_sm & sig_sec_sm & sig_rec_sm & sig_tag_sm;
@@ -242,7 +242,7 @@ begin
         generic map (n => 66)
         port map ( D => sig_sm_swap_in,
                     clk => clk,
-                    reset => reset,
+                    reset => '0',
                     Q => sig_sm_swap_out);
     
     sig_tag_gen_swap <= sig_sm_swap_out(65);
@@ -253,26 +253,26 @@ begin
     -- SWAP stage
     swapper : swap
         port map ( swap_key => sig_sec_swap(12 downto 0),
-                    D3 => sig_rec_swap(39 downto 32),
-                    D2 => sig_sm_swap_out(31 downto 24),
-                    D1 => sig_sm_swap_out(23 downto 16),
-                    D0 => sig_sm_swap_out(15 downto 8),
+                    D3 => sig_rec_swap(31 downto 24),
+                    D2 => sig_rec_swap(23 downto 16),
+                    D1 => sig_rec_swap(15 downto 8),
+                    D0 => sig_rec_swap(7 downto 0),
                     A3 => sig_a3,
                     A2 => sig_a2,
                     A1 => sig_a1,
                     A0 => sig_a0);
                     
-    sig_swap_rol_in <= sig_tag_gen_swap & sig_a3 & sig_a2 & sig_a2 & sig_a1 & sig_a0 & sig_sm_swap_out(95 downto 0);
+    sig_swap_rol_in <= sig_tag_gen_swap & sig_a3 & sig_a2 & sig_a1 & sig_a0 & sig_sec_swap & sig_rec_swap & sig_tag_swap;
     
     -- SWAP/ROL stage register
     swap_rol_reg : regn
         generic map (n => 98)
         port map ( D => sig_swap_rol_in,
                     clk => clk,
-                    reset => reset,
+                    reset => '0',
                     Q => sig_swap_rol_out);
     
-    sig_tag_gen_rol <= sig_sm_swap_out(97);
+    sig_tag_gen_rol <= sig_sm_swap_out(65);
     sig_sec_rol <= sig_sm_swap_out(64 downto 40);
     sig_rec_rol <= sig_sm_swap_out(39 downto 8);
     sig_tag_rol <= sig_sm_swap_out(7 downto 0);
@@ -305,7 +305,7 @@ begin
         generic map (n => 73)
         port map ( D => sig_rol_xor_in,
                     clk => clk,
-                    reset => reset,
+                    reset => '0',
                     Q => sig_rol_xor_out);
     
     sig_tag_gen_xor <= sig_rol_xor_out(72);
@@ -313,10 +313,10 @@ begin
     sig_tag_xor <= sig_rol_xor_out(7 downto 0);
     
     tag_gen : xor_tag
-        port map ( B0 => sig_rol_xor_out(47 downto 40),
-                    B1 => sig_rol_xor_out(55 downto 48),
-                    B2 => sig_rol_xor_out(63 downto 56),
-                    B3 => sig_rol_xor_out(72 downto 64),
+        port map ( B0 => sig_rec_xor(7 downto 0),
+                    B1 => sig_rec_xor(15 downto 8),
+                    B2 => sig_rol_xor_out(23 downto 16),
+                    B3 => sig_rol_xor_out(31 downto 24),
                     our_tag => sig_tag_out);
     
     cmp : comparator
@@ -339,7 +339,7 @@ begin
         generic map (n => 54)
         port map ( D => sig_xor_mem_in,
                     clk => clk,
-                    reset => reset,
+                    reset => '0',
                     Q => sig_xor_mem_out);
     
     sig_tag_gen_mem <= sig_xor_mem_out(53);
