@@ -17,7 +17,7 @@ end swap;
 
 architecture behavioural of swap is
 begin
-    PROCESS(swap_key)
+    PROCESS(swap_key, D3, D2, D1, D0)
         variable size : integer range 0 to 7;
         variable p2 : natural range 0 to 7;
         variable p1 : natural range 0 to 7;

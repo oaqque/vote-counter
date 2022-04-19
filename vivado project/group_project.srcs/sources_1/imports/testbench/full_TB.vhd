@@ -84,5 +84,7 @@ begin
                 send <= '0';
             end if;
         end loop;
+        
+        
     end process;
 end Behavioral;

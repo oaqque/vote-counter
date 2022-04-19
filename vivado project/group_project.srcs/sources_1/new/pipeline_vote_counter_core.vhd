@@ -257,10 +257,10 @@ begin
                     D2 => sig_rec_swap(23 downto 16),
                     D1 => sig_rec_swap(15 downto 8),
                     D0 => sig_rec_swap(7 downto 0),
-                    A3 => sig_a3,
-                    A2 => sig_a2,
-                    A1 => sig_a1,
-                    A0 => sig_a0);
+                    A3 => sig_a3(7 downto 0),
+                    A2 => sig_a2(7 downto 0),
+                    A1 => sig_a1(7 downto 0),
+                    A0 => sig_a0(7 downto 0));
                     
     sig_swap_rol_in <= sig_tag_gen_swap & sig_a3 & sig_a2 & sig_a1 & sig_a0 & sig_sec_swap & sig_rec_swap & sig_tag_swap;
     
@@ -272,10 +272,10 @@ begin
                     reset => '0',
                     Q => sig_swap_rol_out);
     
-    sig_tag_gen_rol <= sig_sm_swap_out(65);
-    sig_sec_rol <= sig_sm_swap_out(64 downto 40);
-    sig_rec_rol <= sig_sm_swap_out(39 downto 8);
-    sig_tag_rol <= sig_sm_swap_out(7 downto 0);
+    sig_tag_gen_rol <= sig_swap_rol_out(97);
+    sig_sec_rol <= sig_swap_rol_out(64 downto 40);
+    sig_rec_rol <= sig_swap_rol_out(39 downto 8);
+    sig_tag_rol <= sig_swap_rol_out(7 downto 0);
     
 
     rotate_0 : rol_8b

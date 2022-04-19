@@ -11,11 +11,11 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="222001fs"></ZoomEndTime>
-      <Cursor1Time time="52fs"></Cursor1Time>
+      <ZoomEndTime time="111601fs"></ZoomEndTime>
+      <Cursor1Time time="11850fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="228"></NameColumnWidth>
+      <NameColumnWidth column_width="216"></NameColumnWidth>
       <ValueColumnWidth column_width="88"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="58" />
@@ -104,6 +104,7 @@
    <wvobject fp_name="/full_TB/uut/sig_rec_sm" type="array">
       <obj_property name="ElementShortName">sig_rec_sm[31:0]</obj_property>
       <obj_property name="ObjectShortName">sig_rec_sm[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/full_TB/uut/sig_rec_swap" type="array">
       <obj_property name="ElementShortName">sig_rec_swap[31:0]</obj_property>
@@ -132,10 +133,12 @@
    <wvobject fp_name="/full_TB/uut/sig_tag_xor" type="array">
       <obj_property name="ElementShortName">sig_tag_xor[7:0]</obj_property>
       <obj_property name="ObjectShortName">sig_tag_xor[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/full_TB/uut/sig_tag_out" type="array">
       <obj_property name="ElementShortName">sig_tag_out[7:0]</obj_property>
       <obj_property name="ObjectShortName">sig_tag_out[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/full_TB/uut/sig_cmp_result_xor" type="logic">
       <obj_property name="ElementShortName">sig_cmp_result_xor</obj_property>
@@ -148,7 +151,6 @@
    <wvobject fp_name="/full_TB/uut/sig_sec_swap" type="array">
       <obj_property name="ElementShortName">sig_sec_swap[24:0]</obj_property>
       <obj_property name="ObjectShortName">sig_sec_swap[24:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/full_TB/uut/sig_sec_rol" type="array">
       <obj_property name="ElementShortName">sig_sec_rol[24:0]</obj_property>
