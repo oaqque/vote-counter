@@ -23,7 +23,7 @@ architecture Behavioral of full_TB is
     end component;
 
     --Inputs
-    signal send : std_logic;
+    signal send : std_logic := '0';
     signal rec_in : std_logic_vector(31 downto 0);
     signal rec_tag_in : std_logic_vector(7 downto 0);
 
@@ -53,6 +53,8 @@ begin
        wait for clk_period/2;
    end process;
 
+
+
    -- Stimulus read from text file
    stimulus: process
         variable v_TEST_LINE : line;
@@ -71,7 +73,7 @@ begin
         file_open(input_file, "test_input.txt", read_mode); 
         while not endfile(input_file) loop
             if busy = '1' then
-                wait for clk_period;
+                wait until rising_edge(clk);
             else 
                 readline(input_file, v_TEST_LINE);
                 read(v_TEST_LINE, v_REC_DATA);
@@ -81,9 +83,12 @@ begin
                 rec_in <= v_REC_DATA;
                 rec_tag_in <= v_TAG_DATA;
                 
+                --wait until rising_edge(clk);
                 send <= '1';
                 wait for clk_period;
                 send <= '0';
+                
+                wait for 6 * clk_period;
             end if;
         end loop;
         

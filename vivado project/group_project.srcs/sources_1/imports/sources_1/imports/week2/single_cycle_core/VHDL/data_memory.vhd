@@ -44,7 +44,7 @@ begin
             -- var_data_mem(0)  := X"0005";
             -- var_data_mem(1)  := X"0008";
 
-        elsif (falling_edge(clk) and write_enable = '1') then
+        elsif (rising_edge(clk) and write_enable = '1') then
             -- memory writes on the falling clock edge
             var_data_mem(var_addr_rec) := write_data;
             var_data_mem(var_addr_tot) := (write_data + old_total);

@@ -40,7 +40,7 @@ begin
     begin
        	if (reset = '1') then
            addr_out <= '0'; 
-       	elsif (rising_edge(clk)) then
+       	elsif (falling_edge(clk)) then
            	if En = '0' then
                 addr_out <= '0';
            	else
