@@ -6,10 +6,10 @@ void print_byte_array(unsigned char byte_array[4]);
 int main ()
 {
     // Record input
-    unsigned char D3 = 168;
+    unsigned char D3 = 18;
     unsigned char D2 = 128;
-    unsigned char D1 = 148;
-    unsigned char D0 = 221;
+    unsigned char D1 = 38;
+    unsigned char D0 = 95;
     unsigned char input[4] = {D0, D1, D2, D3};
     print_byte_array(input);
     // Secret key
