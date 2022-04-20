@@ -44,7 +44,7 @@ begin
            	if En = '0' then
                 addr_out <= '0';
            	else
-           		addr_out <= not(addr_out);
+           		addr_out <= '1';
            	end if;
        	end if;
     end process;

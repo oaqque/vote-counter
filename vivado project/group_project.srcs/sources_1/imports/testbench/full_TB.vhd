@@ -19,16 +19,15 @@ architecture Behavioral of full_TB is
             rec_in      : in std_logic_vector(31 downto 0);
             rec_tag_in  : in std_logic_vector(7 downto 0);
             busy        : out std_logic);
-      -- Place port here
     end component;
 
     --Inputs
     signal send : std_logic := '0';
     signal rec_in : std_logic_vector(31 downto 0);
     signal rec_tag_in : std_logic_vector(7 downto 0);
-
-    --Outputs
     signal busy : std_logic := '0';
+    
+    --Outputs
     signal reset : std_logic;
     signal clk : std_logic;
     constant clk_period : time := 10 ns;
@@ -53,7 +52,14 @@ begin
        wait for clk_period/2;
    end process;
 
-
+   -- Reset process
+   p_reset: process
+   begin
+        reset <= '1';
+        wait for clk_period;
+        reset <= '0';
+        wait for clk_period * 20;
+   end process;
 
    -- Stimulus read from text file
    stimulus: process
@@ -62,36 +68,21 @@ begin
         variable v_TAG_DATA : std_logic_vector(7 downto 0);
         variable v_SPACE : character;
     begin
-        -- Reset the vote counter
- 
-            reset <= '1';
-            wait for clk_period;
-            reset <= '0';
-            wait for clk_period;
-      
-
+        -- wait for reset
+        wait for clk_period;
         file_open(input_file, "test_input.txt", read_mode); 
         while not endfile(input_file) loop
-            if busy = '1' then
-                wait until rising_edge(clk);
-            else 
-                readline(input_file, v_TEST_LINE);
-                read(v_TEST_LINE, v_REC_DATA);
-                read(v_TEST_LINE, v_SPACE);
-                read(v_TEST_LINE, V_TAG_DATA);
-                
-                rec_in <= v_REC_DATA;
-                rec_tag_in <= v_TAG_DATA;
-                
-                --wait until rising_edge(clk);
-                send <= '1';
-                wait for clk_period;
-                send <= '0';
-                
-                wait for 6 * clk_period;
-            end if;
+            send <= '1';
+            readline(input_file, v_TEST_LINE);
+            read(v_TEST_LINE, v_REC_DATA);
+            read(v_TEST_LINE, v_SPACE);
+            read(v_TEST_LINE, V_TAG_DATA);        
+            rec_in <= v_REC_DATA;
+            rec_tag_in <= v_TAG_DATA;           
+            --wait for 1 clock cycle
+            wait for clk_period;          
         end loop;
-        
+        send <= '0';
         
     end process;
 end Behavioral;
