@@ -9,8 +9,6 @@ r3  | r2  | r1  | r0  | s   | p2  | p1  | b2 | b1
 -- Check that Vote Count is tallying up
 District 0 Candidate 1 Vote Count 25 [Valid Tag]
 00000 0001 00000000000000000011001 -> 01100000
-District 1 Candidate 1 Vote Count 30 [Valid Tag]
-00000 0001 00000000000000000011110 -> 01111100
 District 21 Candidate 1 Vote Count 38109 [Valid Tag]
 10101 0001 00000001001010011011101 -> 01100100
 
