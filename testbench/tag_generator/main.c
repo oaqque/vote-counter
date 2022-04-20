@@ -1,15 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "tag_generation.h"
 
 void print_byte_array(unsigned char byte_array[4]);
 
-int main ()
+int main (int argc, char* argv[])
 {
+    if (argc != 5) {
+        printf("Incorrect input count detected, 4 inputs expected\n");
+        return EXIT_FAILURE;
+    }
+
     // Record input
-    unsigned char D3 = 18;
-    unsigned char D2 = 128;
-    unsigned char D1 = 38;
-    unsigned char D0 = 95;
+    unsigned char D3 = atoi(argv[1]);
+    unsigned char D2 = atoi(argv[2]);
+    unsigned char D1 = atoi(argv[3]);
+    unsigned char D0 = atoi(argv[4]);
     unsigned char input[4] = {D0, D1, D2, D3};
     print_byte_array(input);
     // Secret key
@@ -34,7 +40,7 @@ int main ()
     printf("==== TAG GENERATED ====\n");
     printf("%d\n", tag);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
 
 void print_byte_array(unsigned char byte_array[4])
