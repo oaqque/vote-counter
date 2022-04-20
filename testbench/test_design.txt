@@ -18,7 +18,7 @@ District 1 Candidate 2 Vote Count 25  [Valid Tag]
 
 -- Check that Boundary district tally up
 District 31 Candidate 1 Vote Count 99 [Valid Tag]
-11111 0001 00000000000000001100011 -> 01000110
+11111 0001 00000000000000001100011 -> 01001110
 
 -- Check that Boundary district tally up
 District 1 Candidate 15 Vote Count 1 [Valid Tag]
