@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tftg256-3" LaunchTime="1650453665">
-  <File Type="PA-TCL" Name="mux_2to1_16b.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="mux_2to1_16b_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="mux_2to1_16b_reports.tcl"/>
-  <File Type="RDS-RDS" Name="mux_2to1_16b.vds"/>
-  <File Type="RDS-UTIL" Name="mux_2to1_16b_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="mux_2to1_16b_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="mux_2to1_16b.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="mux_2to1_16b_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="mux_2to1_16b_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tftg256-3" LaunchTime="1650457348">
+  <File Type="PA-TCL" Name="pipeline_vote_counter_core.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="pipeline_vote_counter_core_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="pipeline_vote_counter_core_reports.tcl"/>
+  <File Type="RDS-RDS" Name="pipeline_vote_counter_core.vds"/>
+  <File Type="RDS-UTIL" Name="pipeline_vote_counter_core_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="pipeline_vote_counter_core_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="pipeline_vote_counter_core.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="pipeline_vote_counter_core_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="pipeline_vote_counter_core_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/week2/single_cycle_core/VHDL/mux_2to1_1b.vhd">
@@ -157,8 +157,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="mux_2to1_16b"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="pipeline_vote_counter_core"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -174,9 +173,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

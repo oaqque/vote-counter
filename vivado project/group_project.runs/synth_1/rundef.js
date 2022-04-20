@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log mux_2to1_16b.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mux_2to1_16b.tcl" );
+         "-log pipeline_vote_counter_core.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pipeline_vote_counter_core.tcl" );
 
 
 

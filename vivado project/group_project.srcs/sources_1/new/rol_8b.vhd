@@ -20,8 +20,8 @@
 
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.numeric_std.all;
 
 entity rol_8b is
 	  port ( blk : in std_logic_vector(7 downto 0);
@@ -30,9 +30,10 @@ entity rol_8b is
 end rol_8b;
 
 architecture behavioural of rol_8b is
-	  signal modulo : integer := 0;
+	 
+	  signal modulo : natural range 0 to 7;
 begin
+    modulo <=  conv_integer(offset) mod 8;
 
-    modulo <= conv_integer(offset) mod 8;
-    blk_out <= blk(7 - modulo downto 0) & blk(7 downto 8 - modulo);
+    blk_out <= std_logic_vector(rotate_left(unsigned(blk), modulo));
 end behavioural;

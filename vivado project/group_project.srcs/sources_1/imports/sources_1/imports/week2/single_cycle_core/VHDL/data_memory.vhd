@@ -15,7 +15,7 @@ end data_memory;
 
 architecture behavioral of data_memory is
 
-type mem_array is array(0 to 1023) of std_logic_vector(31 downto 0);
+type mem_array is array(0 to 530) of std_logic_vector(31 downto 0);
 signal sig_data_mem : mem_array;
 
 begin
@@ -38,7 +38,7 @@ begin
         if (reset = '1') then
             -- initial values of the data memory : reset to zero 
             var_data_mem(0) := "00000000110110100100111001011001";
-            data_write : FOR i IN 1 TO 1023 loop
+            data_write : FOR i IN 1 TO 530 loop
                 var_data_mem(i) := X"00000000";
             END loop;
             -- var_data_mem(0)  := X"0005";

@@ -1,14 +1,14 @@
-
-*** Running vivado
-    with args -log pipeline_vote_counter_core.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pipeline_vote_counter_core.tcl
-
-
-
-****** Vivado v2020.2 (64-bit)
-  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 20 22:22:31 2022
+# Process ID: 17764
+# Current directory: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/group_project.runs/synth_1
+# Command line: vivado.exe -log pipeline_vote_counter_core.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pipeline_vote_counter_core.tcl
+# Log file: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/group_project.runs/synth_1/pipeline_vote_counter_core.vds
+# Journal file: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/group_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
 source pipeline_vote_counter_core.tcl -notrace
 Command: synth_design -top pipeline_vote_counter_core -part xc7a100tftg256-3
 Starting synth_design

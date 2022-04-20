@@ -193,7 +193,64 @@ signal sig_xor_mem_out : std_logic_vector(53 downto 0);
 signal sig_sec_out : std_logic_vector(31 downto 0);
 signal sig_write_en : std_logic;
 
+attribute dont_touch : boolean;
+attribute dont_touch of       sig_pc_state         : signal is true;   
+attribute dont_touch of        sig_tag_gen_sm       : signal is true;   
+attribute dont_touch of         sig_sec_load      : signal is true;   
+attribute dont_touch of         sig_sec_sm      : signal is true;   
+attribute dont_touch of          sig_rec_sm     : signal is true;   
+attribute dont_touch of       sig_tag_sm        : signal is true;   
+attribute dont_touch of       sig_sm_swap_in        : signal is true;   
+attribute dont_touch of      sig_sm_swap_out         : signal is true;   
+attribute dont_touch of      sig_sec_swap         : signal is true;   
+attribute dont_touch of       sig_rec_swap        : signal is true;   
+attribute dont_touch of       sig_tag_swap        : signal is true;   
+attribute dont_touch of        sig_swap_rol_in       : signal is true;   
 
+attribute dont_touch of  sig_a3 :signal is true;
+attribute dont_touch of sig_a2 : signal is true;
+attribute dont_touch of  sig_a1 : signal is true;
+attribute dont_touch of  sig_a0 : signal is true;
+    
+    -- control signals
+  attribute dont_touch of  sig_tag_gen_swap : signal is true;
+
+-- ROL stage
+attribute dont_touch of  sig_swap_rol_out : signal is true;
+attribute dont_touch of  sig_sec_rol : signal is true;
+attribute dont_touch of  sig_rec_rol : signal is true;
+attribute dont_touch of  sig_tag_rol : signal is true;
+attribute dont_touch of  sig_rol_xor_in : signal is true;
+
+attribute dont_touch of  sig_b3 : signal is true;
+attribute dont_touch of sig_b2 : signal is true;
+attribute dont_touch of  sig_b1 : signal is true;
+attribute dont_touch of sig_b0 : signal is true;
+
+    -- control signals
+    attribute dont_touch of  sig_tag_gen_rol : signal is true;
+
+-- XOR stage
+attribute dont_touch of  sig_rol_xor_out : signal is true;
+attribute dont_touch of  sig_rec_xor : signal is true;
+attribute dont_touch of  sig_tag_xor : signal is true;
+attribute dont_touch of  sig_tag_out : signal is true;
+attribute dont_touch of  sig_cmp_result_xor : signal is true;
+attribute dont_touch of  sig_rec_addr_xor :signal is true;
+attribute dont_touch of  sig_tot_addr_xor : signal is true;
+attribute dont_touch of  sig_xor_mem_in : signal is true;
+
+    -- control signals
+   attribute dont_touch of  sig_tag_gen_xor : signal is true;
+
+-- MEM stage
+attribute dont_touch of  sig_cmp_result_mem :signal is true;
+attribute dont_touch of  sig_tag_gen_mem : signal is true;
+attribute dont_touch of  sig_rec_addr_mem : signal is true;
+attribute dont_touch of  sig_tot_addr_mem : signal is true;
+attribute dont_touch of  sig_xor_mem_out : signal is true;
+attribute dont_touch of  sig_sec_out : signal is true;
+attribute dont_touch of sig_write_en :signal is true;
 
 begin
 
