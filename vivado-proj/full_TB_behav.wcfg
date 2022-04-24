@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="full_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="full_TB" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="30517fs"></ZoomStartTime>
+      <ZoomEndTime time="225318fs"></ZoomEndTime>
+      <Cursor1Time time="66500fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="271"></NameColumnWidth>
+      <ValueColumnWidth column_width="106"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="71" />
+   <wvobject fp_name="/full_TB/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/send" type="logic">
+      <obj_property name="ElementShortName">send</obj_property>
+      <obj_property name="ObjectShortName">send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/send" type="logic">
+      <obj_property name="ElementShortName">send</obj_property>
+      <obj_property name="ObjectShortName">send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/rec_in" type="array">
+      <obj_property name="ElementShortName">rec_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rec_in[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/rec_tag_in" type="array">
+      <obj_property name="ElementShortName">rec_tag_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rec_tag_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_pc_state" type="logic">
+      <obj_property name="ElementShortName">sig_pc_state</obj_property>
+      <obj_property name="ObjectShortName">sig_pc_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_sec_load" type="logic">
+      <obj_property name="ElementShortName">sig_sec_load</obj_property>
+      <obj_property name="ObjectShortName">sig_sec_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_rec_sm" type="array">
+      <obj_property name="ElementShortName">sig_rec_sm[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_rec_sm[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_rec_swap" type="array">
+      <obj_property name="ElementShortName">sig_rec_swap[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_rec_swap[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_rec_rol" type="array">
+      <obj_property name="ElementShortName">sig_rec_rol[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_rec_rol[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_rec_xor" type="array">
+      <obj_property name="ElementShortName">sig_rec_xor[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_rec_xor[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tag_sm" type="array">
+      <obj_property name="ElementShortName">sig_tag_sm[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_tag_sm[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tag_swap" type="array">
+      <obj_property name="ElementShortName">sig_tag_swap[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_tag_swap[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tag_rol" type="array">
+      <obj_property name="ElementShortName">sig_tag_rol[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_tag_rol[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tag_xor" type="array">
+      <obj_property name="ElementShortName">sig_tag_xor[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_tag_xor[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tag_out" type="array">
+      <obj_property name="ElementShortName">sig_tag_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_tag_out[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_cmp_result_xor" type="logic">
+      <obj_property name="ElementShortName">sig_cmp_result_xor</obj_property>
+      <obj_property name="ObjectShortName">sig_cmp_result_xor</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_cmp_result_mem" type="logic">
+      <obj_property name="ElementShortName">sig_cmp_result_mem</obj_property>
+      <obj_property name="ObjectShortName">sig_cmp_result_mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_sec_sm" type="array">
+      <obj_property name="ElementShortName">sig_sec_sm[24:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_sec_sm[24:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_sec_swap" type="array">
+      <obj_property name="ElementShortName">sig_sec_swap[24:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_sec_swap[24:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_sec_rol" type="array">
+      <obj_property name="ElementShortName">sig_sec_rol[24:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_sec_rol[24:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_sm_swap_in" type="array">
+      <obj_property name="ElementShortName">sig_sm_swap_in[65:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_sm_swap_in[65:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_sm_swap_out" type="array">
+      <obj_property name="ElementShortName">sig_sm_swap_out[65:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_sm_swap_out[65:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_swap_rol_in" type="array">
+      <obj_property name="ElementShortName">sig_swap_rol_in[97:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_swap_rol_in[97:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_swap_rol_out" type="array">
+      <obj_property name="ElementShortName">sig_swap_rol_out[97:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_swap_rol_out[97:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_rol_xor_in" type="array">
+      <obj_property name="ElementShortName">sig_rol_xor_in[72:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_rol_xor_in[72:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_rol_xor_out" type="array">
+      <obj_property name="ElementShortName">sig_rol_xor_out[72:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_rol_xor_out[72:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_xor_mem_in" type="array">
+      <obj_property name="ElementShortName">sig_xor_mem_in[53:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_xor_mem_in[53:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_xor_mem_out" type="array">
+      <obj_property name="ElementShortName">sig_xor_mem_out[53:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_xor_mem_out[53:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_a3" type="array">
+      <obj_property name="ElementShortName">sig_a3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_a3[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_a2" type="array">
+      <obj_property name="ElementShortName">sig_a2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_a2[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_a1" type="array">
+      <obj_property name="ElementShortName">sig_a1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_a1[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_a0" type="array">
+      <obj_property name="ElementShortName">sig_a0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_a0[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_b3" type="array">
+      <obj_property name="ElementShortName">sig_b3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_b3[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_b2" type="array">
+      <obj_property name="ElementShortName">sig_b2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_b2[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_b1" type="array">
+      <obj_property name="ElementShortName">sig_b1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_b1[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_b0" type="array">
+      <obj_property name="ElementShortName">sig_b0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_b0[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_rec_addr_xor" type="array">
+      <obj_property name="ElementShortName">sig_rec_addr_xor[9:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_rec_addr_xor[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_rec_addr_mem" type="array">
+      <obj_property name="ElementShortName">sig_rec_addr_mem[9:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_rec_addr_mem[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tot_addr_xor" type="array">
+      <obj_property name="ElementShortName">sig_tot_addr_xor[9:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_tot_addr_xor[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tot_addr_mem" type="array">
+      <obj_property name="ElementShortName">sig_tot_addr_mem[9:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_tot_addr_mem[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_sec_out" type="array">
+      <obj_property name="ElementShortName">sig_sec_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_sec_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/rec_in" type="array">
+      <obj_property name="ElementShortName">rec_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rec_in[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/rec_tag_in" type="array">
+      <obj_property name="ElementShortName">rec_tag_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rec_tag_in[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tag_gen_sm" type="logic">
+      <obj_property name="ElementShortName">sig_tag_gen_sm</obj_property>
+      <obj_property name="ObjectShortName">sig_tag_gen_sm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tag_gen_swap" type="logic">
+      <obj_property name="ElementShortName">sig_tag_gen_swap</obj_property>
+      <obj_property name="ObjectShortName">sig_tag_gen_swap</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tag_gen_rol" type="logic">
+      <obj_property name="ElementShortName">sig_tag_gen_rol</obj_property>
+      <obj_property name="ObjectShortName">sig_tag_gen_rol</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tag_gen_xor" type="logic">
+      <obj_property name="ElementShortName">sig_tag_gen_xor</obj_property>
+      <obj_property name="ObjectShortName">sig_tag_gen_xor</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_tag_gen_mem" type="logic">
+      <obj_property name="ElementShortName">sig_tag_gen_mem</obj_property>
+      <obj_property name="ObjectShortName">sig_tag_gen_mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/sig_write_en" type="logic">
+      <obj_property name="ElementShortName">sig_write_en</obj_property>
+      <obj_property name="ObjectShortName">sig_write_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[34]" type="array">
+      <obj_property name="ElementShortName">[34][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[34][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[55]" type="array">
+      <obj_property name="ElementShortName">[55][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[55][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[68]" type="array">
+      <obj_property name="ElementShortName">[68][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[68][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[99]" type="array">
+      <obj_property name="ElementShortName">[99][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[99][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[65]" type="array">
+      <obj_property name="ElementShortName">[65][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[65][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[66]" type="array">
+      <obj_property name="ElementShortName">[66][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[66][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[497]" type="array">
+      <obj_property name="ElementShortName">[497][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[497][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[527]" type="array">
+      <obj_property name="ElementShortName">[527][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[527][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[528]" type="array">
+      <obj_property name="ElementShortName">[528][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[528][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[101]" type="array">
+      <obj_property name="ElementShortName">[101][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[101][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[102]" type="array">
+      <obj_property name="ElementShortName">[102][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[102][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[132]" type="array">
+      <obj_property name="ElementShortName">[132][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[132][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[135]" type="array">
+      <obj_property name="ElementShortName">[135][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[135][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem[168]" type="array">
+      <obj_property name="ElementShortName">[168][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[168][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/full_TB/uut/data_mem/sig_data_mem" type="array">
+      <obj_property name="ElementShortName">sig_data_mem[0:1023][31:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_data_mem[0:1023][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

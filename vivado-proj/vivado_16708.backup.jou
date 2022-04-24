@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Apr 18 21:49:34 2022
+# Process ID: 16708
+# Current directory: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27228 E:\OneDrive - UNSW\Computer Engineering\COMP3211\vivado projects\project\vote-counter\vivado project\group_project.xpr
+# Log file: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/vivado.log
+# Journal file: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/group_project.xpr}
+import_files -norecurse {{E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/testbench/full_TB.vhd}}
