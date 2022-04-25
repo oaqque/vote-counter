@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Apr 18 22:02:26 2022
+# Process ID: 556
+# Current directory: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19868 E:\OneDrive - UNSW\Computer Engineering\COMP3211\vivado projects\project\vote-counter\vivado project\group_project.xpr
+# Log file: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/vivado.log
+# Journal file: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/group_project.xpr}
+move_files -fileset sim_1 [get_files  {{E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/group_project.srcs/sources_1/imports/testbench/full_TB.vhd}}]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top full_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source full_TB.tcl
+close_sim
+launch_simulation
+source full_TB.tcl
+current_wave_config {Untitled 2}
+add_wave {{/full_TB/uut/clk}} {{/full_TB/uut/reset}} {{/full_TB/uut/send}} {{/full_TB/uut/rec_in}} {{/full_TB/uut/rec_tag_in}} {{/full_TB/uut/busy}} {{/full_TB/uut/sig_pc_state}} {{/full_TB/uut/sig_tag_gen_sm}} {{/full_TB/uut/sig_busy}} {{/full_TB/uut/sig_sec_load}} {{/full_TB/uut/sig_sec_sm}} {{/full_TB/uut/sig_rec_sm}} {{/full_TB/uut/sig_tag_sm}} {{/full_TB/uut/sig_sm_swap_in}} {{/full_TB/uut/sig_sm_swap_out}} {{/full_TB/uut/sig_sec_swap}} {{/full_TB/uut/sig_rec_swap}} {{/full_TB/uut/sig_tag_swap}} {{/full_TB/uut/sig_swap_rol_in}} {{/full_TB/uut/sig_a3}} {{/full_TB/uut/sig_a2}} {{/full_TB/uut/sig_a1}} {{/full_TB/uut/sig_a0}} {{/full_TB/uut/sig_tag_gen_swap}} {{/full_TB/uut/sig_swap_rol_out}} {{/full_TB/uut/sig_sec_rol}} {{/full_TB/uut/sig_rec_rol}} {{/full_TB/uut/sig_tag_rol}} {{/full_TB/uut/sig_rol_xor_in}} {{/full_TB/uut/sig_b3}} {{/full_TB/uut/sig_b2}} {{/full_TB/uut/sig_b1}} {{/full_TB/uut/sig_b0}} {{/full_TB/uut/sig_tag_gen_rol}} {{/full_TB/uut/sig_rol_xor_out}} {{/full_TB/uut/sig_rec_xor}} {{/full_TB/uut/sig_tag_xor}} {{/full_TB/uut/sig_tag_out}} {{/full_TB/uut/sig_cmp_result_xor}} {{/full_TB/uut/sig_rec_addr_xor}} {{/full_TB/uut/sig_tot_addr_xor}} {{/full_TB/uut/sig_xor_mem_in}} {{/full_TB/uut/sig_tag_gen_xor}} {{/full_TB/uut/sig_cmp_result_mem}} {{/full_TB/uut/sig_tag_gen_mem}} {{/full_TB/uut/sig_rec_addr_mem}} {{/full_TB/uut/sig_tot_addr_mem}} {{/full_TB/uut/sig_xor_mem_out}} {{/full_TB/uut/sig_sec_out}} {{/full_TB/uut/sig_write_en}} 
+save_wave_config {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}
+add_files -fileset sim_1 -norecurse {{E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}}
+set_property xsim.view {{E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}} [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}
+source full_TB.tcl
+current_wave_config {full_TB_behav.wcfg}
+add_wave {{/full_TB/uut/data_mem/sig_data_mem}} 
+save_wave_config {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}
+source full_TB.tcl
+close_sim
+launch_simulation
+open_wave_config {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}
+source full_TB.tcl
+save_wave_config {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}
+source full_TB.tcl
+save_wave_config {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}
+source full_TB.tcl
+save_wave_config {E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/full_TB_behav.wcfg}
+close_sim

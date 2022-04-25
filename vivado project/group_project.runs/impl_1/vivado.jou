@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 20 22:00:07 2022
+# Process ID: 11700
+# Current directory: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/group_project.runs/impl_1
+# Command line: vivado.exe -log pipeline_vote_counter_core.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pipeline_vote_counter_core.tcl -notrace
+# Log file: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/group_project.runs/impl_1/pipeline_vote_counter_core.vdi
+# Journal file: E:/OneDrive - UNSW/Computer Engineering/COMP3211/vivado projects/project/vote-counter/vivado project/group_project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source pipeline_vote_counter_core.tcl -notrace

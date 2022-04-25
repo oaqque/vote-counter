@@ -1,0 +1,15 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Apr 20 22:00:53 2022
+| Host         : DESKTOP-6CAVDAS running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file pipeline_vote_counter_core_bus_skew_routed.rpt -pb pipeline_vote_counter_core_bus_skew_routed.pb -rpx pipeline_vote_counter_core_bus_skew_routed.rpx
+| Design       : pipeline_vote_counter_core
+| Device       : 7a100t-ftg256
+| Speed File   : -3  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+
